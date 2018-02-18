@@ -1,0 +1,49 @@
+
+body{
+
+  background-image: url("../imagen/magic.png");
+  font-family: 'Anton', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+h5, ul li{
+ color: grey!important;
+ }
+
+
+
+#diamond1, #diamond2, #diamond3, #diamond4 {
+    display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+    transition: opacity .35s ease;
+}
+
+img {
+    display: block;
+    height: 130px;  
+    width: 100px;
+}
+
+a img {
+    width: 6%;
+    height: 4%;
+    display: block;
+    float: left;
+}
+
+.heart-red{
+  height: 155px;
+    width: 190px;
+}
+
+button{
+  text-decoration: none !important;
+  color: white!important;
+}
+
+
+

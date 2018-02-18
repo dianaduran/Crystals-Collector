@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 //get random num between 2-99
-var x = 2, y = 99;
+var x = 1, y = 120;
 var ranGuess = Math.floor(Math.random() * ((y-x)+1) + x);
                     $("#numGuess").append(ranGuess);
                     
@@ -14,7 +14,7 @@ var diam1=0, diam2=0,diam3=0, diam4=0;
 
 var numSum=0;
 
-var a=2, b=10;
+var a=1, b=12;
 
 
 
@@ -32,6 +32,7 @@ console.log(diam4);
 //click first Diamond
 $("#diamond1").on("click", function(){
  
+
  //debugger;
  var aux=numSum+diam1;
  var tagH1=$("#numSum");
