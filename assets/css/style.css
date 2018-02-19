@@ -7,7 +7,8 @@ body{
   font-weight: bold!important;
   background-repeat:no-repeat;
   background-color:#111;
-height: auto;
+background-attachment:fixed;
+background-size:cover;
 }
 
 .marge{
