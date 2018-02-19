@@ -63,37 +63,36 @@ button{
 }
 
 
-/*@media screen and (max-width:  768px) {
+@media screen and (max-width:  768px) {
     h5, ul li{
  color: grey!important;
  }
 
 h1 {
-    font-size: 10.8rem !important;
+    font-size: 172.8px !important;
   }
 
  h3, h6, p{
-       font-size: 4.25rem !important;
+       font-size: 68px !important;
  }
  .marge{
   margin-top: 25px;
 }
-}*/
+}
 
-/*@media screen and (max-width: 640px){
+@media screen and (max-width: 640px){
     h5, ul li{
  color: grey!important;
  }
 
 h1 {
-    font-size: 10.8rem !important;
+    font-size: 172px !important;
   }
 
  h3, h6, p{
-       font-size: 4.25rem !important;
+       font-size: 68px !important;
  }
  .marge{
   margin-top: 25px;
 }
 }
-*/
