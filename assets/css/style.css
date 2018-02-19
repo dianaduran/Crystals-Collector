@@ -7,8 +7,8 @@ body{
   font-weight: bold!important;
   background-repeat:no-repeat;
   background-color:#111;
-background-attachment:fixed;
-/*background-size:cover;*/
+  background-attachment:fixed;
+  background-size:cover;
 }
 
 .marge{
@@ -21,11 +21,11 @@ h5, ul li{
  }
 
 h1 {
-    font-size: 6.8rem !important;
+    font-size: 130px !important;
   }
 
  h3, h6, p{
-       font-size: 2.25rem !important;
+       font-size: 36px !important;
  } 
 
 
