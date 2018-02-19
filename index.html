@@ -7,7 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Geostar+Fill|Iceland|Share+Tech+Mono" rel="stylesheet"> 
 
+	<!--Animation-->
+	 <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 	<!--JS-->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -17,11 +20,11 @@
 </head>
 <body>
 
-<div class="container text-center" style="margin-top: 55px;">
+<div class="container text-center marge">
 
 <div class="row">
 	<div class="col-lg-12 text-center">
-		<button class="btn btn-link"><img src="assets/imagen/heart.png" class="heart-red"><h1 id="numGuess"></h1></button>
+		<h1 id="numGuess"></h1>
 	</div>
 </div>
 
@@ -31,23 +34,23 @@
 			<p id="idWin">Win:</p>
 			<p id="idLoss"> Loss:</p>
 			<br>
-			<h3>This is your heart!!, try to beat like the red heart</h3>
-	       	<h3 id="numSum">0</h3>
+			<h3>This is your heart!! Try to beat like the red heart</h3>
+	       	<--><h3 id="numSum">0</h3>
 	</div>
 	 <div class="col-lg-6">
-		    <button id="diamond1" class="btn btn-link"><img src="assets/imagen/yellow.png"></button>
-			<button id="diamond2" class="btn btn-link"><img src="assets/imagen/pink.png"></button>
-			<button id="diamond3" class="btn btn-link"><img src="assets/imagen/green.png"></button>
-			<button id="diamond4" class="btn btn-link"><img src="assets/imagen/blue.png"></button>
+		    <button id="diamond1" class="btn btn-link animated"><img src="assets/imagen/morado.png"></button>
+			<button id="diamond2" class="btn btn-link animated"><img src="assets/imagen/pink.png"></button>
+			<button id="diamond3" class="btn btn-link animated"><img src="assets/imagen/green.png"></button>
+			<button id="diamond4" class="btn btn-link animated"><img src="assets/imagen/blue.png"></button>
        </div>
 </div>
 
 <div class="row">
 
-<div class="col-lg-12 text-md-left mt-10">
+<div class="col-lg-12 text-md-left">
 
  <!-- Button trigger modal -->
-<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
   Play
 </button>
 
@@ -64,10 +67,10 @@
       <div class="modal-body">
        <ul class="text-justify text-md-left">
 	        	<li class="lead">-You will have a random number at the start of the game.</li>
-	        	<li class="lead">-By clicking on a crystal you will add a specific amount of points to your total score.</li>
+	        	<li class="lead">-By clicking on a heart you will add a specific amount of points to your total score.</li>
 	        	<li class="lead">-Win the game by matching your total score to the given random number.</li>
 	        	<li class="lead">-Lose if your number surpasses the given number.</li>
-	        	<li class="lead">-The value of each crystal is hidden from you until you click on it.</li>
+	        	<li class="lead">-The value of each heart is hidden from you until you click on it.</li>
 	        	<li class="lead">-Each time the game restarts, the value of each crystal will change.</li>
 	        </ul>
       </div>

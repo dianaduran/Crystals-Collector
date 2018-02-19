@@ -1,15 +1,33 @@
 
 body{
 
-  background-image: url("../imagen/magic.png");
-  font-family: 'Anton', sans-serif;
-  color: white;
-  font-weight: bold;
+  background-image: url("../imagen/ahrde75.jpg");
+  font-family: 'Black Ops One', cursive;
+  font-family: 'Geostar Fill', cursive;
+  font-family: 'Iceland', cursive;
+  font-family: 'Share Tech Mono', monospace;
+  color: #e30e20;
+  font-weight: bold!important;
+  background-repeat:no-repeat;
+  background-color:#111
+
 }
+
+.marge{
+  margin-top: 13px;
+}
+
 h5, ul li{
  color: grey!important;
  }
 
+h1 {
+    font-size: 6.8rem !important;
+  }
+
+ h3, h6, p{
+       font-size: 2.25rem !important;
+ } 
 
 
 #diamond1, #diamond2, #diamond3, #diamond4 {
@@ -46,4 +64,36 @@ button{
 }
 
 
+@media screen and (max-width:  768px) {
+    h5, ul li{
+ color: grey!important;
+ }
 
+h1 {
+    font-size: 4.5rem !important;
+  }
+
+ h3, h6, p{
+       font-size: 1.25rem !important;
+ }
+ .marge{
+  margin-top: 5px;
+}
+}
+
+@media screen and (max-width: 640px){
+    h5, ul li{
+ color: grey!important;
+ }
+
+h1 {
+    font-size: 4.5rem !important;
+  }
+
+ h3, h6, p{
+       font-size: 1.25rem !important;
+ }
+ .marge{
+  margin-top: 5px;
+}
+}
