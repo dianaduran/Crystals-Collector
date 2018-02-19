@@ -63,13 +63,13 @@ button{
 }
 
 
-@media screen and (max-width:  768px) {
+/*@media screen and (max-width:  768px) {
     h5, ul li{
  color: grey!important;
  }
 
 h1 {
-    font-size: 6.5rem !important;
+    font-size: 6.8rem !important;
   }
 
  h3, h6, p{
@@ -78,15 +78,15 @@ h1 {
  .marge{
   margin-top: 25px;
 }
-}
+}*/
 
-@media screen and (max-width: 640px){
+/*@media screen and (max-width: 640px){
     h5, ul li{
  color: grey!important;
  }
 
 h1 {
-    font-size: 6.5rem !important;
+    font-size: 6.8rem !important;
   }
 
  h3, h6, p{
@@ -95,4 +95,4 @@ h1 {
  .marge{
   margin-top: 25px;
 }
-}
+}*/
