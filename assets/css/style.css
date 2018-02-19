@@ -8,17 +8,13 @@ body{
   background-repeat:no-repeat;
   background-color:#111;
 background-attachment:fixed;
-background-size:cover;
+/*background-size:cover;*/
 }
 
 .marge{
   margin-top: 13px;
 }
 
-.jumbotron{
-opacity: 0.6;
-    filter: alpha(opacity=60);
-}
 h5, ul li{
  color: grey!important;
  font-family: 'Questrial', sans-serif;
@@ -67,7 +63,24 @@ button{
 }
 
 
-@media screen and (max-width:  768px) {
+/*@media screen and (max-width:  768px) {
+    h5, ul li{
+ color: grey!important;
+ }
+
+h1 {
+    font-size: 10.8rem !important;
+  }
+
+ h3, h6, p{
+       font-size: 4.25rem !important;
+ }
+ .marge{
+  margin-top: 25px;
+}
+}*/
+
+/*@media screen and (max-width: 640px){
     h5, ul li{
  color: grey!important;
  }
@@ -83,20 +96,4 @@ h1 {
   margin-top: 25px;
 }
 }
-
-@media screen and (max-width: 640px){
-    h5, ul li{
- color: grey!important;
- }
-
-h1 {
-    font-size: 10.8rem !important;
-  }
-
- h3, h6, p{
-       font-size: 4.25rem !important;
- }
- .marge{
-  margin-top: 25px;
-}
-}
+*/
