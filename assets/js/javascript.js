@@ -3,9 +3,9 @@ $(document).ready(function() {
 $('.modal').modal("show");
 
 
-//get random num between 2-99
-var x = 1, y = 120;
-var ranGuess = Math.floor(Math.random() * ((y-x)+1) + x);
+//get random num between 1-120
+
+var ranGuess = Math.floor(Math.random() * ((120-1)+1) + 1);
                     $("#numGuess").append(ranGuess);
                     
 
@@ -18,17 +18,15 @@ var diam1=0, diam2=0,diam3=0, diam4=0;
 
 var numSum=0;
 
-var a=1, b=12;
 
-
-
-diam1= Math.floor(Math.random() * ((b-a)+1) + a);
+//val random 1-12
+diam1= Math.floor(Math.random() * ((12-1)+1) + 1);
 console.log(diam1);
-diam2= Math.floor(Math.random() * ((b-a)+1) + a);
+diam2= Math.floor(Math.random() * ((12-1)+1) + 1);
 console.log(diam2);
-diam3= Math.floor(Math.random() * ((b-a)+1) + a);	
+diam3= Math.floor(Math.random() * ((12-1)+1) + 1);	
 console.log(diam3);
-diam4= Math.floor(Math.random() * ((b-a)+1) + a);
+diam4= Math.floor(Math.random() * ((12-1)+1) + 1);
 console.log(diam4);
 
 
@@ -39,7 +37,6 @@ $("#diamond1").on("click", function(){
 $("#diamond1").addClass("flash");
  numSum+=numSum+diam1;
  validate();
- //$("#diamond1").removeClass("flash");
 });
 
 //click second diamind
@@ -68,21 +65,17 @@ numSum+=numSum+diam4;
 //Reset play
 function Reset(){
 
-	ranGuess = Math.floor(Math.random() * ((y-x)+1) + x);
+	ranGuess = Math.floor(Math.random() * ((120-1)+1) + 1);
 	           $("#numGuess").text(ranGuess);	
-	diam1= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam1);
-	diam2= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam2);
-	diam3= Math.floor(Math.random() * ((b-a)+1) + a);	
-	console.log(diam3);
-	diam4= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam4);
+	diam1= Math.floor(Math.random() * ((12-1)+1) + 1);
+	diam2= Math.floor(Math.random() * ((12-1)+1) + 1);
+	diam3= Math.floor(Math.random() * ((12-1)+1) + 1);
+	diam4= Math.floor(Math.random() * ((12-1)+1) + 1);
 	numSum=0;
 	$("#numSum").text(numSum);
 	$("#diamond1, #diamond2, #diamond3, #diamond4").removeClass("flash");
 
-	 };
+};
 
 
 
@@ -109,8 +102,16 @@ function validate(){
  	Reset();
  }
 
- 
 }
+
+$("#reset").click(function(){
+	Reset();
+	win=0;
+	loss=0;
+	$("#idWin").text('Win: '+win);
+	$("#idLoss").text('Loss: '+loss);
+	$("#idMessage").text("");
+});
 
 
 

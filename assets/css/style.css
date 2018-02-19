@@ -2,10 +2,7 @@
 body{
 
   background-image: url("../imagen/ahrde75.jpg");
-  font-family: 'Black Ops One', cursive;
-  font-family: 'Geostar Fill', cursive;
-  font-family: 'Iceland', cursive;
-  font-family: 'Share Tech Mono', monospace;
+ font-family: 'Lobster', cursive;
   color: #e30e20;
   font-weight: bold!important;
   background-repeat:no-repeat;
@@ -19,6 +16,7 @@ body{
 
 h5, ul li{
  color: grey!important;
+ font-family: 'Questrial', sans-serif;
  }
 
 h1 {
