@@ -34,8 +34,7 @@ console.log(diam4);
 //click first Diamond
 $("#diamond1").on("click", function(){
  
-
- //debugger;
+$("#diamond1").addClass("flash");
  var aux=numSum+diam1;
  var tagH1=$("#numSum");
  if(aux < ranGuess)
@@ -65,7 +64,7 @@ $("#diamond1").on("click", function(){
 
 $("#diamond2").on("click", function(){
  
- //debugger;
+ $("#diamond2").addClass("flash");
  var aux=numSum+diam2;
  var tagH1=$("#numSum");
  if(aux < ranGuess)
@@ -94,7 +93,7 @@ $("#diamond2").on("click", function(){
 //click third diamond
 $("#diamond3").on("click", function(){
  
- //debugger;
+ $("#diamond3").addClass("flash");
  var aux=numSum+diam3;
  var tagH1=$("#numSum");
  if(aux < ranGuess)
@@ -123,7 +122,7 @@ $("#diamond3").on("click", function(){
 // click fourth diamond
 $("#diamond4").on("click", function(){
  
- //debugger;
+ $("#diamond4").addClass("flash");
  var aux=numSum+diam4;
  var tagH1=$("#numSum");
  if(aux < ranGuess)
@@ -165,8 +164,8 @@ function Reset(){
 	console.log(diam4);
 	numSum=0;
 	$("#numSum").text(numSum);
-
-	 };
+$("#diamond1, #diamond2, #diamond3, #diamond4").removeClass("flash");
+};
 
 
 $("#reset").click(function(){
