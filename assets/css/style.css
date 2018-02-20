@@ -28,11 +28,6 @@ h1 {
        font-size: 35px !important;
  } 
 
- .text-heart:hover{
-    color: crimson;
- }
-
-
 #diamond1, #diamond2, #diamond3, #diamond4 {
     display: inline-block;
     height: 134px;
@@ -41,6 +36,10 @@ h1 {
     vertical-align: top;
     width: 104px;
     transition: opacity .35s ease;
+}
+
+.btn-link:hover{
+  opacity: 0.50;
 }
 
 img {
@@ -75,7 +74,33 @@ hr{
     height: 3px;
 }
 
+@keyframes hvr-pop {
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
 
+.hvr-pop {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+.hvr-pop:hover,
+.hvr-pop:focus,
+.hvr-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+}
 /*@media screen and (min-width:  768px) {
    
   h1 {
