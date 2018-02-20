@@ -63,12 +63,9 @@ button{
 }
 
 
-@media screen and (max-width:  768px) {
-    h5, ul li{
- color: grey!important;
- }
-
-h1 {
+@media screen and (min-width:  768px) {
+   
+  h1 {
     font-size: 172.8px !important;
   }
 
@@ -80,10 +77,8 @@ h1 {
 }
 }
 
-@media screen and (max-width: 640px){
-    h5, ul li{
- color: grey!important;
- }
+@media screen and (min-width: 640px){
+  
 
 h1 {
     font-size: 172px !important;
