@@ -1,182 +1,109 @@
 $(document).ready(function() {
 
-$('.modal').modal("show");
+    $('.modal').modal("show");
+
+    var win = 0;
+    var loss = 0;
+
+    var diam1 = 0,
+        diam2 = 0,
+        diam3 = 0,
+        diam4 = 0;
+
+    var numSum = 0;
+    var tagH1 = $("#numSum");
 
 
-//get random num between 2-99
-var x = 1, y = 120;
-var ranGuess = Math.floor(Math.random() * ((y-x)+1) + x);
-                    $("#numGuess").append(ranGuess);
-                    
+    //get random num between 2-99
+    var ranGuess = Math.floor((Math.random() * 120) + 1);
+    $("#numGuess").append(ranGuess);
 
-var win=0;
-var loss=0;
-
-var diam1=0, diam2=0,diam3=0, diam4=0;
-
-var numSum=0;
-
-var a=1, b=12;
-
-
-
-diam1= Math.floor(Math.random() * ((b-a)+1) + a);
-console.log(diam1);
-diam2= Math.floor(Math.random() * ((b-a)+1) + a);
-console.log(diam2);
-diam3= Math.floor(Math.random() * ((b-a)+1) + a);	
-console.log(diam3);
-diam4= Math.floor(Math.random() * ((b-a)+1) + a);
-console.log(diam4);
-
-
-
-//click first Diamond
-$("#diamond1").on("click", function(){
- 
-$("#diamond1").addClass("flash");
- var aux=numSum+diam1;
- var tagH1=$("#numSum");
- if(aux < ranGuess)
- {
- 	numSum=aux;
- 	tagH1.text(numSum);
- }
-
- else if( aux == ranGuess)
- {
- 	numSum=aux;
- 	win++;
- 	$("#idWin").text('Win: '+win);
- 	$("#idMessage").text('You won '+win+' times!!');
- 	Reset();
- }
- else{
- 	loss++;
- 	$("#idLoss").text('Loss: '+loss);
- 	$("#idMessage").text('You lost '+loss+' times!!');
- 	Reset();
- }
-
-});
-
-//click second diamind
-
-$("#diamond2").on("click", function(){
- 
- $("#diamond2").addClass("flash");
- var aux=numSum+diam2;
- var tagH1=$("#numSum");
- if(aux < ranGuess)
- {
- 	numSum=aux;
- 	tagH1.text(numSum);
- }
-
- else if( aux == ranGuess)
- {
- 	numSum=aux;
- 	win++;
- 	$("#idWin").text('Win: '+win);
- 	$("#idMessage").text('You won '+win+' times!!');
- 	Reset();
- }
- else{
- 	loss++;
- 	$("#idLoss").text('Loss: '+loss);
- 	$("#idMessage").text('You lost '+loss+' times!!');
- 	Reset();
- }
-
-});
-
-//click third diamond
-$("#diamond3").on("click", function(){
- 
- $("#diamond3").addClass("flash");
- var aux=numSum+diam3;
- var tagH1=$("#numSum");
- if(aux < ranGuess)
- {
- 	numSum=aux;
- 	tagH1.text(numSum);
- }
-
- else if( aux == ranGuess)
- {
- 	numSum=aux;
- 	win++;
- 	$("#idWin").text('Win: '+win);
- 	$("#idMessage").text('You won '+win+' times!!');
- 	Reset();
- }
- else{
- 	loss++;
- 	$("#idLoss").text('Loss: '+loss);
- 	$("#idMessage").text('You lost '+loss+' times!!');
- 	Reset();
- }
-
-});
-
-// click fourth diamond
-$("#diamond4").on("click", function(){
- 
- $("#diamond4").addClass("flash");
- var aux=numSum+diam4;
- var tagH1=$("#numSum");
- if(aux < ranGuess)
- {
- 	numSum=aux;
- 	tagH1.text(numSum);
- }
-
- else if( aux == ranGuess)
- {
- 	numSum=aux;
- 	win++;
- 	$("#idWin").text('Win: '+win);
- 	$("#idMessage").text('You won '+win+' times!!');
- 	Reset();
- }
- else{
- 	loss++;
- 	$("#idLoss").text('Loss: '+loss);
- 	$("#idMessage").text('You lost '+loss+' times!!');
- 	Reset();
- }
-
-});
-
-
-//Reset play
-function Reset(){
-
-	ranGuess = Math.floor(Math.random() * ((y-x)+1) + x);
-	           $("#numGuess").text(ranGuess);	
-	diam1= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam1);
-	diam2= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam2);
-	diam3= Math.floor(Math.random() * ((b-a)+1) + a);	
-	console.log(diam3);
-	diam4= Math.floor(Math.random() * ((b-a)+1) + a);
-	console.log(diam4);
-	numSum=0;
-	$("#numSum").text(numSum);
-$("#diamond1, #diamond2, #diamond3, #diamond4").removeClass("flash");
-};
-
-
-$("#reset").click(function(){
-	Reset();
-	win=0;
-	loss=0;
-	$("#idWin").text('Win: '+win);
-	$("#idLoss").text('Loss: '+loss);
-	$("#idMessage").text("");
-});
+    //random 1-12
+    diam1 = Math.floor((Math.random() * 12) + 1);
+    console.log(diam1);
+    diam2 = Math.floor((Math.random() * 12) + 1);
+    console.log(diam2);
+    diam3 = Math.floor((Math.random() * 12) + 1);
+    console.log(diam3);
+    diam4 = Math.floor((Math.random() * 12) + 1);
+    console.log(diam4);
 
 
 
+    //lost or win
+    function validate() {
+
+        if (numSum < ranGuess) {
+            tagH1.text(numSum);
+        } else if (numSum == ranGuess) {
+            win++;
+            $("#idWin").text('Win: ' + win);
+            $("#idMessage").text('You won ' + win + ' times!!');
+            Reset();
+        } else {
+            loss++;
+            $("#idLoss").text('Loss: ' + loss);
+            $("#idMessage").text('You lost ' + loss + ' times!!');
+            Reset();
+        }
+    }
+
+
+
+    //click first Diamond
+    $("#diamond1").on("click", function() {
+        $("#diamond1").toggleClass("flash");
+        numSum += diam1;
+        validate();
+    });
+
+    //click second diamind
+
+    $("#diamond2").on("click", function() {
+        $("#diamond2").toggleClass("flash");
+        numSum += diam2;
+        validate();
+    });
+
+    //click third diamond
+    $("#diamond3").on("click", function() {
+        $("#diamond3").toggleClass("flash");
+        numSum += diam3;
+        validate();
+    });
+
+    // click fourth diamond
+    $("#diamond4").on("click", function() {
+        $("#diamond4").toggleClass("flash");
+        numSum += diam4;
+        validate();
+    });
+
+
+    //Reset play
+    function Reset() {
+
+        ranGuess = Math.floor((Math.random() * 120) + 1);
+        $("#numGuess").text(ranGuess);
+        diam1 = Math.floor((Math.random() * 12) + 1);
+        console.log(diam1);
+        diam2 = Math.floor((Math.random() * 12) + 1);
+        console.log(diam2);
+        diam3 = Math.floor((Math.random() * 12) + 1);
+        console.log(diam3);
+        diam4 = Math.floor((Math.random() * 12) + 1);
+        console.log(diam4);
+        numSum = 0;
+        $("#numSum").text(numSum);
+    };
+
+
+    $("#reset").click(function() {
+        Reset();
+        win = 0;
+        loss = 0;
+        $("#idWin").text('Win: ' + win);
+        $("#idLoss").text('Loss: ' + loss);
+        $("#idMessage").text("");
+    });
 });

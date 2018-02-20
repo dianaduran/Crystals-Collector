@@ -21,11 +21,11 @@ h5, ul li{
  }
 
 h1 {
-    font-size: 110px !important;
+    font-size: 107px !important;
   }
 
  h3, h6, p{
-       font-size: 20px !important;
+       font-size: 35px !important;
  } 
 
  .text-heart:hover{
@@ -76,7 +76,7 @@ hr{
 }
 
 
-@media screen and (min-width:  768px) {
+/*@media screen and (min-width:  768px) {
    
   h1 {
     font-size: 172px !important;
@@ -88,9 +88,9 @@ hr{
  .marge{
   margin-top: 25px;
 }
-}
+}*/
 
-@media screen and (min-width: 640px){
+/*@media screen and (min-width: 640px){
   
 
 h1 {
@@ -104,3 +104,4 @@ h1 {
   margin-top: 25px;
 }
 }
+*/
